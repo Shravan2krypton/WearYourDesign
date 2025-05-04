@@ -1,0 +1,484 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background: #e91e63;   /* Pink background */
+    color: white;
+    padding: 18px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* Left Section: 3-Bar Menu + Logo (Attached to Left) */
+.left-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Align items to the left */
+    gap: 10px;                    /* Small gap between bars and logo */
+    margin-left: 0;                /* Attach to the left corner */
+}
+
+/* 3-Bar Menu Styling */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    margin: 0;                    /* No margin on the left */
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+    top: 60px;
+    left: 30px;
+}
+
+/* Dropdown Links */
+.dropdown a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Dropdown Hover Effect */
+.dropdown a:hover {
+    background: #f1f1f1;
+    color: #e91e63;
+}
+
+/* Show Dropdown */
+.show {
+    display: block;
+}
+
+/* Navigation Menu */
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+/* Navigation Links with Underline */
+.nav a {
+    text-decoration: underline;  /* Always underlined */
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav a:hover {
+    color: #ffeb3b;  
+    text-decoration: underline;
+}
+
+/* Current Page Highlight */
+.nav a.active {
+    color: #ffeb3b;  
+    font-weight: bold;
+    border-bottom: 3px solid #ffeb3b;
+    transition: 0.3s;
+}
+/*Cart*/
+.nav-cart{
+    display: flex;
+    gap: 35px;
+}
+.nav-cart a {
+    text-decoration: underline;  /* Always underlined */
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-cart i:hover{
+    color: #ffeb3b;
+}
+.nav-cart a.active{
+    color: #ffeb3b;  
+    font-weight: bold;
+    border-bottom: 3px solid #ffeb3b;
+    transition: 0.3s;
+}
+
+/* Search Icon */
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Search Icon Hover */
+.search-icon:hover {
+    color: #ffeb3b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+   
+
+    .menu-container {
+        margin-bottom: 10px;
+    }
+}
+.hero-sec{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e2e7e6;
+}
+.hero-image{
+    background-image: url("images/hero.png");
+    width: 100%;
+    height: 210px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #fce4ec, #f8bbd0);  /* Light pink gradient */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    gap: 40px;  /* Space between content blocks */
+    flex-wrap: wrap;  /* Responsive design */
+}
+
+/* Shared styling for both content blocks */
+.hero-content, .hero-content1 {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Hover effect for content blocks */
+.hero-content:hover, .hero-content1:hover {
+    transform: translateY(-10px);
+}
+
+/* Headings and paragraphs */
+.hero-content h1, .hero-content1 h1 {
+    font-size: 2.5rem;
+    color: #e91e63;  /* Pinkish tone */
+    margin-bottom: 15px;
+}
+
+.hero-content p, .hero-content1 p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Customize Your Design button */
+.hero-content1 a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #e91e63;  /* Pink button */
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content1 a:hover {
+    background: #c2185b;  /* Darker pink on hover */
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;  /* Stack content vertically */
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+    .hero-content, .hero-content1 {
+        max-width: 100%;
+        padding: 40px 25px;
+    }
+
+    .hero-content h1, .hero-content1 h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p, .hero-content1 p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for smooth entry */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+}
+
+.box {
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Slightly rounded corners for a cleaner look */
+    overflow: hidden; /* Ensures the image doesn't overflow the box */
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.box-image {
+    height: 280px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.box:hover .box-image {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.box-content {
+    margin: 0 1rem;
+    text-align: center; /* Center the text */
+}
+
+.box-content p {
+    color: #007185;
+    font-size: 16px;
+}
+
+.shop-now-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background: #e91e63; /* Bright pink */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #e91e63; /* Matching border */
+}
+
+.shop-now-btn:hover {
+    background: white;
+    color: #e91e63;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #f8bbd0, #fce4ec); /* Light pink gradient */
+    color: #333;
+    padding: 60px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer-column h3 {
+    color: #d81b60;  /* Dark pink for headings */
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-column p, 
+.footer-column a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #d81b60;  /* Dark pink on hover */
+    transform: translateX(5px);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #d81b60;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #d81b60;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-social a:hover {
+    background: #ad1457;  /* Darker pink on hover */
+    transform: translateY(-5px);
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background: #d81b60;  /* Dark pink */
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-column {
+        margin: 20px 0;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+    

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="pay.css">  <!-- Link to CSS -->
+</head>
+<body>
+
+<header>
+    <h1>Choose Your Payment Method</h1>
+    <a href="cart.html" class="back-btn">🔙 Back to Cart</a>
+</header>
+
+<div class="payment-container">
+    <h2>Total Amount: <span id="totalAmount">Loading...</span></h2>
+
+    <!-- Google Pay -->
+    <div class="payment-option">
+        <img src="images/gpay.jpeg" alt="Google Pay" class="payment-icon">
+        <button onclick="payWithGooglePay()">Pay with Google Pay</button>
+    </div>
+
+    <!-- UPI Payment -->
+    <div class="payment-option">
+        <img src="images/upi.jpeg" alt="UPI" class="payment-icon">
+        <form id="upiForm">
+            <label for="upiID">Enter UPI ID:</label>
+            <input type="text" id="upiID" placeholder="example@upi" required>
+            <button type="submit">Pay with UPI</button>
+        </form>
+    </div>
+
+    <!-- QR Code -->
+    <div class="payment-option">
+        <img src="images/qr-code.png" alt="QR Code" class="payment-icon">
+        <p>Scan the QR code with your payment app</p>
+    </div>
+
+    <!-- Credit/Debit Card -->
+    <div class="payment-option">
+        <img src="images/card.png" alt="Card Payment" class="payment-icon">
+        <form id="cardForm">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9876 5432" required>
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="123" required>
+
+            <button type="submit">Pay with Card</button>
+        </form>
+    </div>
+
+    <!-- Cash on Delivery -->
+    <div class="payment-option">
+        <img src="images/cod.png" alt="Cash on Delivery" class="payment-icon">
+        <button onclick="payCOD()">Cash on Delivery</button>
+    </div>
+
+</div>
+<script>
+    // Function to extract query parameters
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const price = params.get("price");
+
+        // Display the product name and pre-filled price
+        document.getElementById("totalAmount").innerText = `₹${price}`;
+    }
+
+    window.onload = getQueryParams;
+</script>
+
+<script src="pay.js"></script>  <!-- Link to JS -->
+</body>
+</html>

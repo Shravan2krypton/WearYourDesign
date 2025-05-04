@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #fce4ec, #f8bbd0);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Paint Container */
+.paint-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Toolbar Styling */
+.toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background: #f8bbd0;
+    border-bottom: 2px solid #ccc;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Buttons and Inputs */
+.toolbar label, 
+.toolbar input, 
+.toolbar select, 
+.toolbar button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #fff;
+    font-size: 14px;
+}
+
+.toolbar button:hover {
+    background: #8e44ad;
+    color: #fff;
+}
+
+.toolbar input[type="color"] {
+    height: 40px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.toolbar input[type="range"] {
+    width: 150px;
+}
+
+/* Canvas */
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #ffffff;
+    cursor: crosshair;
+}
+.preview-container {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+.preview-container h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}

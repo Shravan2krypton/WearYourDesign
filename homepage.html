@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearYourDesign - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="header">
+    <div class="container">
+
+        <!-- Left Section: 3-Bar Menu + Logo -->
+        <div class="left-section">
+            <i class="fa fa-bars menu-icon" onclick="toggleDropdown()"></i>
+            <div class="logo">WearYourDesign</div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown" id="dropdownMenu">
+            <a href="Clothing.html">Clothing</a>
+            <a href="Accessories.html">Accessories</a>
+            <a href="Jewellery.html">Jewelleries</a>
+            
+        </div>
+        <script>
+            // Toggle Dropdown Function
+            function toggleDropdown() {
+                const dropdown = document.getElementById("dropdownMenu");
+                dropdown.classList.toggle("show");
+            }
+        
+            // Close the dropdown if clicked outside
+            window.onclick = function(event) {
+                if (!event.target.matches('.menu-icon')) {
+                    const dropdowns = document.getElementsByClassName("dropdown");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+        <!-- Navigation Menu -->
+        <nav class="nav">
+
+            <a href="about.html" class="nav-link">About us</a>
+            <div class="nav-cart">
+                <a href="cart.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i></a>
+            </div>
+            <div class="navbar-right">
+                <span id="username" class="username"></span>  
+                <a href="index.html" onclick="logout()" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+        </nav>
+
+
+        
+    </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to WearYourDesign</h1>
+        <p>Discover the latest trends in clothing, accessories, and jewellery.</p>
+    </div>
+    <div class="hero-content1">
+        <h1>Design Your Product</h1>
+        <p>Unleash your creativity and customize clothing, accessories, and jewelry to match your unique style.</p>
+        <a href="paint.html" class="Customize Your Design">Customize Your Design</a>
+    </div>
+    
+</section>
+<div class="shop-section">
+    <div class="box">
+        <div class="box-content">
+            <h1>Clothing</h1>
+            <div class="box-image" style="background-image: url('images/Clothing.jpeg');">
+                <div class="shop-now-container">
+                <a href="Clothing.html" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-content">
+            <h1>Accessories</h1>
+            <div class="box-image" style="background-image: url('images/Accessories.jpeg');">
+                <div class="shop-now-container">
+                    <a href="Accessories.html" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-content">
+            <h1>Jewellery</h1>
+            <div class="box-image" style="background-image: url('images/Jewellery.jpg');">
+                <div class="shop-now-container">
+                    <a href="Jewellery.html" class="shop-now-btn">Shop Now</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+<!-- Contact Info -->
+<div class="footer-column">
+    <h3>Contact Us</h3>
+    <ul>
+        <li>Email: support@wearyourdesign.com</li>
+        <li>Phone: +91 9904427095</li>
+        <li>Address: Vadodara,Gujarat</li>
+    </ul>
+</div>
+
+<!-- Social Media Icons -->
+<div class="footer-column">
+    <h3>Follow Us</h3>
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+</div>
+
+</div>
+
+<!-- Bottom Footer -->
+<div class="footer-bottom">
+<p>&copy; 2025 WearYourDesign. All rights reserved. | Designed with ❤️ by Your Team</p>
+</div>
+</footer>
+
+<script>
+    // Retrieve the logged-in user's info
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    if (loggedInUser) {
+        // Display user's name in the navbar
+        document.getElementById("username").textContent = `Hello, ${loggedInUser.name}`;
+    } else {
+        alert("No user is logged in! Redirecting to login page...");
+        window.location.href = "login.html";  // Redirect if not logged in
+    }
+
+    // Logout function
+    function logout() {
+        localStorage.removeItem("loggedInUser");  // Clear the session
+        alert("You have been logged out!");
+    }
+</script>
+
+</body>
+</html>
+

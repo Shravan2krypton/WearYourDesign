@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right, #fce4ec, #f8bbd0);  /* Light pink gradient */
+}
+
+/* Container for sections */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Header Section */
+.header {
+    background: #e91e63;  /* Pink shade */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 1.3rem;
+}
+
+/* About Section */
+.about-section, .mission-vision, .team-section, .contact-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.about-section h2, .mission-vision h2, .team-section h2, .contact-section h2 {
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin-bottom: 30px;
+}
+
+.about-section p, .mission-vision p, .team-section p, .contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mission, .vision {
+    flex: 1;
+    padding: 40px;
+    background: #fce4ec;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+}
+
+/* Team Section */
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #e91e63;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-info p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0;
+}
+
+.contact-info i {
+    color: #e91e63;
+    margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #e91e63;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .team-grid {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+}

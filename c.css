@@ -1,0 +1,111 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #fce4ec, #ffffff); /* Light pink gradient */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #ff4081;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Painting Board Layout */
+.painting-board {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    overflow: hidden;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    justify-content: space-evenly;
+    border: 2px solid #ff4081;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Info Section */
+.info {
+    padding: 20px;
+}
+
+.info h2 {
+    color: #ff4081;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #512da8;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Shop Now & Add to Cart Buttons */
+.btn {
+    display: inline-block;
+    background: #ff4081;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart-btn {
+    background: #512da8;  /* Purple color for Add to Cart */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Add to Cart Hover Effect */
+.cart-btn:hover {
+    background: #673ab7; /* Lighter purple on hover */
+}
+
